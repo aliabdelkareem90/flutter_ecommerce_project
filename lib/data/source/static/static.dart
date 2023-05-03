@@ -16,6 +16,24 @@ List<OnboardingModel> onboardingList = [
   OnboardingModel(
     title: 'Track Your Order',
     image: ImageAssets.thirdOnboardingImg,
-    body: 'Your product is delivered to your home securly ',
+    body: 'Track Your order delivery securly and easily ',
+  ),
+];
+
+List<OnboardingModel> onboardingListArabic = [
+  OnboardingModel(
+    title: 'جد منتجاتك المفضلة',
+    image: ImageAssets.firstOnboardingImg,
+    body: 'جد جميع المنتجات التي ترغب بشرائها بسهولة',
+  ),
+  OnboardingModel(
+    title: 'عملية دفع سهلة وامنة',
+    image: ImageAssets.secondOnboardingImg,
+    body: 'أدفع للمنتج الذي ترغب بشرائه بكل سهولة و امان',
+  ),
+  OnboardingModel(
+    title: 'تعقب مسار طلبك',
+    image: ImageAssets.thirdOnboardingImg,
+    body: 'يمكنك تعقب مسار طلبك من التجهيز للتسليم',
   ),
 ];

@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce_project/controller/onboarding_controller.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/constants/app_colors.dart';
 
-class CustomButton extends GetView<OnBoardingController> {
+class CustomButton extends StatelessWidget {
   final double width;
   final double height;
   final String data;
-  const CustomButton(this.width, this.height, this.data, {super.key});
+  final void Function()? onPressed;
+  const CustomButton({
+    required this.width,
+    required this.height,
+    required this.data,
+    required this.onPressed,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: width,
-      width: height,
+      height: height,
+      width: width,
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor:
@@ -26,9 +31,7 @@ class CustomButton extends GetView<OnBoardingController> {
             ),
           ),
         ),
-        onPressed: () {
-          controller.nextPage();
-        },
+        onPressed: onPressed,
         child: Text(
           data,
           style: GoogleFonts.poppins(

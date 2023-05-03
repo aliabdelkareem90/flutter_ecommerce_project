@@ -23,9 +23,10 @@ class BuildButtonsRow extends StatelessWidget {
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
         child: CustomButton(
-          MediaQuery.of(context).size.height * 0.07,
-          MediaQuery.of(context).size.width * 0.8,
-          'Sign Up',
+          height: MediaQuery.of(context).size.height * 0.07,
+          width: MediaQuery.of(context).size.width * 0.8,
+          data: 'SignUp'.tr,
+          onPressed: () => Get.offAllNamed(AppRoutes.loginRoute),
         ),
       );
     } else {
@@ -39,15 +40,16 @@ class BuildButtonsRow extends StatelessWidget {
                 Get.offAllNamed(AppRoutes.loginRoute);
               },
               child: Text(
-                'Skip',
+                'Skip'.tr,
                 style: TextStyle(color: AppColors.primaryColor, fontSize: 22),
               ),
             ),
           ),
           CustomButton(
-            MediaQuery.of(context).size.height * 0.07,
-            MediaQuery.of(context).size.width * 0.4,
-            'Continue',
+            height: MediaQuery.of(context).size.height * 0.07,
+            width: MediaQuery.of(context).size.width * 0.4,
+            data: 'Continue'.tr,
+            onPressed: () => controller.nextPage(),
           ),
         ],
       );
