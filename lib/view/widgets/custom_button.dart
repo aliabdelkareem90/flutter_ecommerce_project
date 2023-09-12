@@ -6,13 +6,18 @@ import '../../core/constants/app_colors.dart';
 class CustomButton extends StatelessWidget {
   final double width;
   final double height;
-  final String data;
+  final String text;
+  Color? color;
+  Color? textColor;
   final void Function()? onPressed;
-  const CustomButton({
+
+  CustomButton({
     required this.width,
     required this.height,
-    required this.data,
+    required this.text,
     required this.onPressed,
+    this.color,
+    this.textColor,
     super.key,
   });
 
@@ -24,7 +29,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ButtonStyle(
           backgroundColor:
-              MaterialStateProperty.all<Color>(AppColors.primaryColor),
+              MaterialStateProperty.all<Color>(color ?? AppColors.primaryColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
@@ -33,9 +38,9 @@ class CustomButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          data,
+          text,
           style: GoogleFonts.poppins(
-            color: Colors.white,
+            color: textColor ?? Colors.white,
             fontSize: 22,
             fontWeight: FontWeight.w600,
           ),

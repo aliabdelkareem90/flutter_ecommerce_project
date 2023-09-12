@@ -13,7 +13,8 @@ class AppTranslations extends Translations {
           onboardingList[2].body: onboardingListArabic[2].body,
           "Continue": "أستمرار",
           "Skip": "تخطي",
-          "SignUp": "التسجيل"
+          "SignUp": "التسجيل",
+          "Welcome Back": "أهلا بعودتك"
         },
         "en": {
           onboardingList[0].title: onboardingList[0].title,
@@ -24,7 +25,8 @@ class AppTranslations extends Translations {
           onboardingList[2].body: onboardingList[2].body,
           "Continue": "Continue",
           "Skip": "Skip",
-          "SignUp": "Sign Up"
+          "SignUp": "Sign Up",
+          "Welcome Back": "Welcome Back"
         }
       };
 }

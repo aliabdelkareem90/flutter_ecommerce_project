@@ -31,7 +31,7 @@ class CustomPageView extends GetView<OnBoardingController> {
           Text(
             onboardingList[i].title.tr,
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.displayLarge,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           const SizedBox(
             height: 20.0,

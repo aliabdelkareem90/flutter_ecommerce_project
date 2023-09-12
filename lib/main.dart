@@ -28,7 +28,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.backGroundColor,
         textTheme: TextTheme(
-          displayLarge: GoogleFonts.poppins(
+          displayMedium: GoogleFonts.poppins(
             color: AppColors.titleColor,
             fontSize: 24,
             fontWeight: FontWeight.w600,
@@ -45,7 +45,7 @@ class App extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
         ),
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
       routes: routes,

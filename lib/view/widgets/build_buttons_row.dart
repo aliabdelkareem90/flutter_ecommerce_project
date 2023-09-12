@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../controller/onboarding_controller.dart';
 import '../../core/constants/app_colors.dart';
@@ -25,7 +26,7 @@ class BuildButtonsRow extends StatelessWidget {
         child: CustomButton(
           height: MediaQuery.of(context).size.height * 0.07,
           width: MediaQuery.of(context).size.width * 0.8,
-          data: 'SignUp'.tr,
+          text: 'SignUp'.tr,
           onPressed: () => Get.offAllNamed(AppRoutes.loginRoute),
         ),
       );
@@ -41,14 +42,18 @@ class BuildButtonsRow extends StatelessWidget {
               },
               child: Text(
                 'Skip'.tr,
-                style: TextStyle(color: AppColors.primaryColor, fontSize: 22),
+                style: GoogleFonts.poppins(
+                  color: AppColors.primaryColor,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
           CustomButton(
             height: MediaQuery.of(context).size.height * 0.07,
             width: MediaQuery.of(context).size.width * 0.4,
-            data: 'Continue'.tr,
+            text: 'Continue'.tr,
             onPressed: () => controller.nextPage(),
           ),
         ],
